@@ -22,7 +22,7 @@ describe("package manifest", () => {
     expect(pkg.pi?.extensions).toEqual(["./index.ts"]);
   });
 
-  it("publishes every Pi extension target and no missing image", async () => {
+  it("publishes every Pi extension target and package image", async () => {
     const pkg = await packageJson();
     for (const target of pkg.pi?.extensions ?? []) {
       await expect(
@@ -30,7 +30,11 @@ describe("package manifest", () => {
       ).resolves.toBeUndefined();
       expect(pkg.files).toContain(target.replace(/^\.\//, ""));
     }
-    expect(pkg.pi?.image).toBeUndefined();
+    expect(pkg.pi?.image).toBe(
+      "https://raw.githubusercontent.com/boadij/pi-killswitch/main/banner.jpg",
+    );
+    await expect(access(join(process.cwd(), "banner.jpg"))).resolves.toBeUndefined();
+    expect(pkg.files).toContain("banner.jpg");
   });
 
   it("does not expose unused Pi packages as peers", async () => {

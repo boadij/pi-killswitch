@@ -8,6 +8,7 @@
     "src/killswitch.ts",
     "src/killswitch-core.ts",
     "src/killswitch-config.ts",
+    "banner.jpg",
     "README.md",
     "RELEASING.md",
     "LICENSE"
@@ -25,7 +26,8 @@
   "pi": {
     "extensions": [
       "./index.ts"
-    ]
+    ],
+    "image": "https://raw.githubusercontent.com/boadij/pi-killswitch/main/banner.jpg"
   },
   "scripts": {
     "test": "vitest run",

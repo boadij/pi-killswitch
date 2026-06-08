@@ -4,6 +4,10 @@ Killswitch keeps Pi runs controlled by enforcing context-budget wrap-up and kill
 
 Start working. Stop before the context gets out of hand.
 
+<p align="center">
+  <img src="banner.jpg" alt="Killswitch preview: Wrap Up. Kill Run.">
+</p>
+
 ## What it does
 
 `pi-killswitch` watches Pi's current context usage and can request a wrap-up or kill the current run when configured thresholds are reached.
@@ -113,9 +117,9 @@ The default mode is `wrap-up-then-kill`:
 
 ## Relationship to pi-downshift
 
-`pi-downshift` switches to a cheaper model after a context threshold.
+[`pi-downshift`](https://github.com/boadij/pi-downshift) switches to a cheaper model after a context threshold.
 
-`pi-killswitch` wraps up or kills the run after a context threshold.
+[`pi-killswitch`](https://github.com/boadij/pi-killswitch) wraps up or kills the run after a context threshold.
 
 They solve related but different problems.
 
