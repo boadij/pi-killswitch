@@ -33,7 +33,9 @@ describe("package manifest", () => {
     expect(pkg.pi?.image).toBe(
       "https://raw.githubusercontent.com/boadij/pi-killswitch/main/banner.jpg",
     );
-    await expect(access(join(process.cwd(), "banner.jpg"))).resolves.toBeUndefined();
+    await expect(
+      access(join(process.cwd(), "banner.jpg")),
+    ).resolves.toBeUndefined();
     expect(pkg.files).toContain("banner.jpg");
   });
 
