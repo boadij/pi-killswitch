@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/boadij/pi-killswitch/compare/v0.2.1...v0.2.2) (2026-06-08)
+
+
+### Bug Fixes
+
+* correct bin path to use relative path prefix ([7ee1d5f](https://github.com/boadij/pi-killswitch/commit/7ee1d5fde4f64cfee09516789353e7ff7dd1865f))
+
 ## [0.2.1](https://github.com/boadij/pi-killswitch/compare/v0.2.0...v0.2.1) (2026-06-08)
 
 
