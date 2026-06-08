@@ -1,0 +1,63 @@
+{
+  "name": "pi-killswitch",
+  "version": "0.1.0",
+  "description": "Keep Pi runs controlled with automatic context-budget wrap-up and kill thresholds.",
+  "type": "module",
+  "files": [
+    "index.ts",
+    "src/killswitch.ts",
+    "src/killswitch-core.ts",
+    "src/killswitch-config.ts",
+    "README.md",
+    "RELEASING.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi-coding-agent",
+    "context-window",
+    "llm",
+    "token-limit",
+    "killswitch",
+    "cost-control"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "typecheck:test": "tsc --noEmit -p tsconfig.test.json",
+    "check": "npm run typecheck && npm run typecheck:test && npm test",
+    "release:dry": "npm run check && npm pack --dry-run",
+    "prepublishOnly": "npm run check",
+    "release:as": "node scripts/release-as.mjs"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "^0.78.0",
+    "@earendil-works/pi-coding-agent": "^0.78.0",
+    "@types/node": "^25.9.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Jeffrey Boadi",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boadij/pi-killswitch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/boadij/pi-killswitch/issues"
+  },
+  "homepage": "https://github.com/boadij/pi-killswitch#readme"
+}

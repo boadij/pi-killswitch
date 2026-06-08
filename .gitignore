@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+.backlog/
+.onion/
+.chatbridge/
+AGENTS.md
+*repomix*
+node_modules/
+AGENTS.md
