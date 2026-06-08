@@ -1,6 +1,6 @@
 {
   "name": "pi-killswitch",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Keep Pi runs controlled with automatic context-budget wrap-up and kill thresholds.",
   "type": "module",
   "files": [
